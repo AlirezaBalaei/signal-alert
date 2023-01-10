@@ -5,6 +5,10 @@ const server = app.listen(
   3000,
   log("proxy server is running on port: 3000", error)
 )
+
+const cors = require("cors")
+
+app.use(cors())
 const got = require("got")
 
 app.get("/:symbol/:interval", async (req, res) => {
