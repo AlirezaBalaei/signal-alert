@@ -21,6 +21,12 @@ const renderChart = async () => {
   const candleseries = chart.addCandlestickSeries()
   const klinedata = await getData()
   candleseries.setData(klinedata)
+  //SMA
+  const sma_series = chart.addLineSeries({ color: "red", lineWidth: 1 })
+  const sma_data = klinedata
+    .filter((d) => d.sma)
+    .map((d) => ({ time: d.time, value: d.sma }))
+  sma_series.setData(sma_data)
 }
 
 renderChart()
