@@ -27,6 +27,12 @@ const renderChart = async () => {
     .filter((d) => d.sma)
     .map((d) => ({ time: d.time, value: d.sma }))
   sma_series.setData(sma_data)
+  //EMA
+  const ema_series = chart.addLineSeries({ color: "green", lineWidth: 1 })
+  const ema_data = klinedata
+    .filter((d) => d.ema)
+    .map((d) => ({ time: d.time, value: d.ema }))
+  ema_series.setData(ema_data)
 }
 
 renderChart()

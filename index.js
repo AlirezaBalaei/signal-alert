@@ -10,7 +10,7 @@ app.use(cors())
 const got = require("got")
 
 //Tulind Functions
-const { sma_inc } = require("./indicators.js")
+const { sma_inc, ema_inc } = require("./indicators.js")
 
 app.get("/:symbol/:interval", async (req, res) => {
   try {
@@ -32,6 +32,7 @@ app.get("/:symbol/:interval", async (req, res) => {
       close: d[4] * 1,
     }))
     klinedata = await sma_inc(klinedata)
+    klinedata = await ema_inc(klinedata)
     res.status(200).json(klinedata)
   } catch (error) {
     res.send(error)
