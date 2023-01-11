@@ -1,7 +1,7 @@
 const { log, error } = console
 
 const getData = async () => {
-  const resp = await fetch("http://127.0.0.1:3000/BTCUSDT/1m")
+  const resp = await fetch("http://127.0.0.1:3000/BTC/USDT/1h")
   const data = await resp.json()
   return data
 }

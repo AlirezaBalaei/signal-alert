@@ -19,7 +19,9 @@
   "author": "Alireza Balaei",
   "license": "ISC",
   "dependencies": {
+    "ccxt": "^2.5.83",
     "cors": "^2.8.5",
+    "dotenv": "^16.0.3",
     "express": "^4.18.2",
     "got": "^11.8.6",
     "nodemon": "^2.0.20",
