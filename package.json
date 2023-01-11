@@ -1,5 +1,5 @@
 {
-  "name": "ccxt-intro",
+  "name": "signal-alert",
   "version": "1.0.0",
   "description": "a node js application to show charts and indicators and then send  user some signal alerts.",
   "main": "index.js",
