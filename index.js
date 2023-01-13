@@ -18,7 +18,7 @@ const exchangeId = "ascendex",
   })
 
 //Tulind Functions
-const { sma_inc, ema_inc } = require("./indicators.js")
+const { sma_inc, ema_inc, rsi_inc, macd_inc } = require("./indicators.js")
 
 //Get request formating as: http://127.0.0.1:3000/BTC/USDT/1h"
 app.get("/:symbol1/:symbol2/:interval", async (req, res) => {
@@ -41,6 +41,8 @@ app.get("/:symbol1/:symbol2/:interval", async (req, res) => {
     }))
     klinedata = await sma_inc(klinedata)
     klinedata = await ema_inc(klinedata)
+    klinedata = await rsi_inc(klinedata)
+    klinedata = await macd_inc(klinedata)
     res.status(200).json(klinedata)
   } catch (error) {
     console.log("err: ", error)
