@@ -10,7 +10,7 @@ app.listen(3000, log("proxy server is running on port: 3000", error))
 
 dotenv.config()
 
-//Instantiated AscendEX.com Exchange
+//Instantiated Exchange
 const exchangeId = "ascendex",
   exchangeClass = ccxt[exchangeId],
   exchange = new exchangeClass({

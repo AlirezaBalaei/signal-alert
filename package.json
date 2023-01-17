@@ -2,10 +2,10 @@
   "name": "signal-alert",
   "version": "1.0.0",
   "description": "a node js application to show charts and indicators and then send  user some signal alerts.",
-  "main": "index.js",
+  "main": "app.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "watch": "nodemon ./index.js"
+    "watch": "nodemon ./app.js"
   },
   "keywords": [
     "ccxt",
