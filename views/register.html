@@ -16,24 +16,28 @@
 <body class="vh-100">
   <main class="container h-100">
     <div class="row d-flex justify-content-center align-items-center h-100">
-      <form class="col-md-7 col-lg-5 col-sm-12 rounded-2 p-5 shadow-lg">
+      <form action="/register" method="post" id="register-form"
+        class="col-md-7 col-lg-5 col-sm-12 rounded-2 p-5 shadow-lg">
         <h4 class="h4 text-secondary">Personal Data</h4>
         <hr class="bg-dark border-2 border-top border-dark mt-0">
         <div class="form-floating mb-1">
-          <input type="name" class="form-control" id="floatingInputName" placeholder="name">
-          <label for="floatingInput">Name</label>
+          <input name="username" type="text" class="form-control" id="floatingInputName" placeholder="username"
+            autocomplete="off">
+          <label for="floatingInput">Username</label>
         </div>
         <div class="form-floating mb-1">
-          <input type="email" class="form-control" id="floatingInput" placeholder="name@example.com">
-          <label for="floatingInput">Email address</label>
+          <input name="email" type="email" class="form-control" id="email-register" placeholder="name@example.com"
+            autocomplete="off">
+          <label for="email-register">Email address</label>
         </div>
         <div class="form-floating  mb-3">
-          <input type="password" class="form-control" id="floatingPassword" placeholder="Password">
-          <label for="floatingPassword">Password</label>
+          <input name="password" type="password" class="form-control" id="password-register" placeholder="Password">
+          <label for="password-register">Password</label>
         </div>
         <h4 class="h4 text-secondary">Exchange Data</h4>
         <hr class="bg-dark border-2 border-top border-dark mt-0">
-        <select class="form-select form-select-lg mb-3" aria-label=".form-select-lg example">
+        <select type="text" form="register-form" name="exchange" id="exchange" class="form-select form-select-lg mb-3"
+          aria-label=".form-select-lg example">
           <option selected>Exchange</option>
           <option value="1">alpaca</option>
           <option value="2">ascendex</option>
@@ -142,14 +146,17 @@
           <option value="105">zonda</option>
         </select>
         <div class="form-floating mb-1">
-          <input type="name" class="form-control" id="floatingInputPublicKey" placeholder="PublicKey">
-          <label for="floatingInput">Public Key</label>
+          <input type="text" name="public-key" class="form-control" id="PublicKey" placeholder="PublicKey"
+            autocomplete="off">
+          <label for="PublicKey">Public Key</label>
         </div>
         <div class="form-floating mb-3">
-          <input type="name" class="form-control" id="floatingInputApiSecretKey" placeholder="ApiSecretKey">
-          <label for="floatingInput">Api Secret Key</label>
+          <input type="text" name="api-secret-key" class="form-control" id="ApiSecretKey" placeholder="ApiSecretKey"
+            autocomplete="off">
+          <label for="ApiSecretKey">Api Secret Key</label>
         </div>
-        <button type="submit" class="btn btn-primary btn-lg w-100">Register</button>
+        <button type="submit" class="btn btn-primary btn-lg w-100 mb-3">Register</button>
+        <p>Already have an account? <a href="/" class="link-primary fw-bold text-decoration-none">Login</a></p>
       </form>
     </div>
 
@@ -159,13 +166,5 @@
 
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
   integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
-<script>
-  exchanges = ["alpaca", "ascendex", "bequant", "bigone", "binance", "binancecoinm", "binanceus", "binanceusdm", "bit2c", "bitbank", "bitbns", "bitfinex", "bitfinex2", "bitflyer", "bitforex", "bitget", "bithumb", "bitmart", "bitmex", "bitopro", "bitpanda", "bitrue", "bitso", "bitstamp", "bitstamp1", "bittrex", "bitvavo", "bkex", "bl3p", "blockchaincom", "btcalpha", "btcbox", "btcex", "btcmarkets", "btctradeua", "btcturk", "buda", "bybit", "cex", "coinbase", "coinbaseprime", "coinbasepro", "coincheck", "coinex", "coinfalcon", "coinmate", "coinone", "coinspot", "cryptocom", "currencycom", "delta", "deribit", "digifinex", "exmo", "flowbtc", "fmfwio", "gate", "gemini", "hitbtc", "hitbtc3", "hollaex", "huobi", "huobijp", "idex", "independentreserve", "indodax", "itbit", "kraken", "kucoin", "kucoinfutures", "kuna", "latoken", "lbank", "lbank2", "luno", "lykke", "mercado", "mexc", "mexc3", "ndax", "novadax", "oceanex", "okcoin", "okx", "paymium", "phemex", "poloniex", "poloniexfutures", "probit", "ripio", "stex", "therock", "tidex", "timex", "tokocrypto", "upbit", "wavesexchange", "wazirx", "whitebit", "woo", "yobit", "zaif", "zb", "zipmex", "zonda"]
-  i = 1
-  newExchanges = exchanges.map((e) => {
-    return `<option value="${i++}">${e}</option>`
-  })
-  console.log(newExchanges)
-</script>
 
 </html>
