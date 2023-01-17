@@ -5,9 +5,10 @@ const cors = require("cors")
 const dotenv = require("dotenv")
 const ccxt = require("ccxt")
 
-dotenv.config()
 app.use(cors())
 app.listen(3000, log("proxy server is running on port: 3000", error))
+
+dotenv.config()
 
 //Instantiated AscendEX.com Exchange
 const exchangeId = "ascendex",
@@ -26,12 +27,9 @@ app.get("/:symbol1/:symbol2/:interval", async (req, res) => {
     const { symbol1, symbol2, interval } = req.params
     const symbol = `${symbol1}/${symbol2}`
     const data = await fetchKline(symbol, interval)
-    // data is in format of: [[kline opentime,
-    // Open price, High price, Low price, Close price,
-    // Volume, Kline Close time, Quote asset volume,
-    // Number of trades, Taker buy base asset volume,
-    // Taker buy quote asset volume, Unused field, ignore]]
 
+    // data is in format of: [[kline opentime, Open price,
+    // High price, Low price, Close price, Volume]]
     let klinedata = data.map((d) => ({
       time: d[0] / 1000,
       open: d[1] * 1,
