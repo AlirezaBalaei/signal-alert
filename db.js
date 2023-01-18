@@ -8,7 +8,16 @@ mongodb.connect(
   function (err, client) {
     module.exports = client
     const app = require("./app")
-    app.listen(process.env.PORT)
+    // process.env.PORT
+    app.listen(4000)
     console.log("connected")
+    // testing if db could be read
+    client
+      .db()
+      .collection("users")
+      .findOne({ username: "abcd" })
+      .then((a) => {
+        console.log(a)
+      })
   }
 )

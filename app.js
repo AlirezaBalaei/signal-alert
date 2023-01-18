@@ -5,10 +5,13 @@ const cors = require("cors")
 const dotenv = require("dotenv")
 const ccxt = require("ccxt")
 
-app.use(cors())
-app.listen(3000, log("proxy server is running on port: 3000", error))
-
 dotenv.config()
+
+app.use(cors())
+app.listen(
+  process.env.PROXYPORT,
+  log("proxy server is running on port: ", process.env.PROXYPORT, error)
+)
 
 //Instantiated Exchange
 const exchangeId = "ascendex",
@@ -58,3 +61,5 @@ async function fetchKline(symbol, interval) {
   })
   return output
 }
+
+module.exports = app
