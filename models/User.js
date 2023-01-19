@@ -10,12 +10,18 @@ User.prototype.cleanUp = function () {
   if (typeof this.data.username != "string") this.data.username = ""
   if (typeof this.data.email != "string") this.data.email = ""
   if (typeof this.data.password != "string") this.data.password = ""
+  if (typeof this.data.exchange != "string") this.data.exchange = ""
+  if (typeof this.data.publickey != "string") this.data.publickey = ""
+  if (typeof this.data.apisecretkey != "string") this.data.apisecretkey = ""
 
   // get rid of any bogus property
   this.data = {
     username: this.data.username.trim().toLowerCase(),
     email: this.data.email.trim().toLowerCase(),
     password: this.data.password,
+    exchange: this.data.exchange,
+    publickey: this.data.publickey,
+    apisecretkey: this.data.apisecretkey,
   }
 }
 
@@ -67,6 +73,17 @@ User.prototype.validate = function () {
         email: this.data.email,
       })
       if (emailExists) this.errors.push("this email is already registered")
+    }
+
+    // if exchange, publickey, apisecret was empty push error
+    if (this.data.exchange == "") {
+      this.errors.push("choose an exchange")
+    }
+    if (this.data.publickey == "") {
+      this.errors.push("choose an publickey")
+    }
+    if (this.data.apisecretkey == "") {
+      this.errors.push("choose an apisecretkey")
     }
     resolve()
   })

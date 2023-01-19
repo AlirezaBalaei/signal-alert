@@ -18,145 +18,166 @@
     <div class="row d-flex justify-content-center align-items-center h-100">
       <form action="/register" method="post" id="register-form"
         class="col-md-7 col-lg-5 col-sm-12 rounded-2 p-5 shadow-lg">
-        <h4 class="h4 text-secondary">Personal Data</h4>
-        <hr class="bg-dark border-2 border-top border-dark mt-0">
-        <div class="form-floating mb-1">
-          <input name="username" type="text" class="form-control" id="floatingInputName" placeholder="username"
-            autocomplete="off">
-          <label for="floatingInput">Username</label>
-        </div>
-        <div class="form-floating mb-1">
-          <input name="email" type="email" class="form-control" id="email-register" placeholder="name@example.com"
-            autocomplete="off">
-          <label for="email-register">Email address</label>
-        </div>
-        <div class="form-floating  mb-3">
-          <input name="password" type="password" class="form-control" id="password-register" placeholder="Password">
-          <label for="password-register">Password</label>
-        </div>
-        <h4 class="h4 text-secondary">Exchange Data</h4>
-        <hr class="bg-dark border-2 border-top border-dark mt-0">
-        <select type="text" form="register-form" name="exchange" id="exchange" class="form-select form-select-lg mb-3"
-          aria-label=".form-select-lg example">
-          <option selected>Exchange</option>
-          <option value="1">alpaca</option>
-          <option value="2">ascendex</option>
-          <option value="3">bequant</option>
-          <option value="4">bigone</option>
-          <option value="5">binance</option>
-          <option value="6">binancecoinm</option>
-          <option value="7">binanceus</option>
-          <option value="8">binanceusdm</option>
-          <option value="9">bit2c</option>
-          <option value="10">bitbank</option>
-          <option value="11">bitbns</option>
-          <option value="12">bitfinex</option>
-          <option value="13">bitfinex2</option>
-          <option value="14">bitflyer</option>
-          <option value="15">bitforex</option>
-          <option value="16">bitget</option>
-          <option value="17">bithumb</option>
-          <option value="18">bitmart</option>
-          <option value="19">bitmex</option>
-          <option value="20">bitopro</option>
-          <option value="21">bitpanda</option>
-          <option value="22">bitrue</option>
-          <option value="23">bitso</option>
-          <option value="24">bitstamp</option>
-          <option value="25">bitstamp1</option>
-          <option value="26">bittrex</option>
-          <option value="27">bitvavo</option>
-          <option value="28">bkex</option>
-          <option value="29">bl3p</option>
-          <option value="30">blockchaincom</option>
-          <option value="31">btcalpha</option>
-          <option value="32">btcbox</option>
-          <option value="33">btcex</option>
-          <option value="34">btcmarkets</option>
-          <option value="35">btctradeua</option>
-          <option value="36">btcturk</option>
-          <option value="37">buda</option>
-          <option value="38">bybit</option>
-          <option value="39">cex</option>
-          <option value="40">coinbase</option>
-          <option value="41">coinbaseprime</option>
-          <option value="42">coinbasepro</option>
-          <option value="43">coincheck</option>
-          <option value="44">coinex</option>
-          <option value="45">coinfalcon</option>
-          <option value="46">coinmate</option>
-          <option value="47">coinone</option>
-          <option value="48">coinspot</option>
-          <option value="49">cryptocom</option>
-          <option value="50">currencycom</option>
-          <option value="51">delta</option>
-          <option value="52">deribit</option>
-          <option value="53">digifinex</option>
-          <option value="54">exmo</option>
-          <option value="55">flowbtc</option>
-          <option value="56">fmfwio</option>
-          <option value="57">gate</option>
-          <option value="58">gemini</option>
-          <option value="59">hitbtc</option>
-          <option value="60">hitbtc3</option>
-          <option value="61">hollaex</option>
-          <option value="62">huobi</option>
-          <option value="63">huobijp</option>
-          <option value="64">idex</option>
-          <option value="65">independentreserve</option>
-          <option value="66">indodax</option>
-          <option value="67">itbit</option>
-          <option value="68">kraken</option>
-          <option value="69">kucoin</option>
-          <option value="70">kucoinfutures</option>
-          <option value="71">kuna</option>
-          <option value="72">latoken</option>
-          <option value="73">lbank</option>
-          <option value="74">lbank2</option>
-          <option value="75">luno</option>
-          <option value="76">lykke</option>
-          <option value="77">mercado</option>
-          <option value="78">mexc</option>
-          <option value="79">mexc3</option>
-          <option value="80">ndax</option>
-          <option value="81">novadax</option>
-          <option value="82">oceanex</option>
-          <option value="83">okcoin</option>
-          <option value="84">okx</option>
-          <option value="85">paymium</option>
-          <option value="86">phemex</option>
-          <option value="87">poloniex</option>
-          <option value="88">poloniexfutures</option>
-          <option value="89">probit</option>
-          <option value="90">ripio</option>
-          <option value="91">stex</option>
-          <option value="92">therock</option>
-          <option value="93">tidex</option>
-          <option value="94">timex</option>
-          <option value="95">tokocrypto</option>
-          <option value="96">upbit</option>
-          <option value="97">wavesexchange</option>
-          <option value="98">wazirx</option>
-          <option value="99">whitebit</option>
-          <option value="100">woo</option>
-          <option value="101">yobit</option>
-          <option value="102">zaif</option>
-          <option value="103">zb</option>
-          <option value="104">zipmex</option>
-          <option value="105">zonda</option>
-        </select>
-        <div class="form-floating mb-1">
-          <input type="text" name="public-key" class="form-control" id="PublicKey" placeholder="PublicKey"
-            autocomplete="off">
-          <label for="PublicKey">Public Key</label>
-        </div>
-        <div class="form-floating mb-3">
-          <input type="text" name="api-secret-key" class="form-control" id="ApiSecretKey" placeholder="ApiSecretKey"
-            autocomplete="off">
-          <label for="ApiSecretKey">Api Secret Key</label>
-        </div>
-        <button type="submit" class="btn btn-primary btn-lg w-100 mb-3">Register</button>
-        <p>Already have an account? <a href="/" class="link-primary fw-bold text-decoration-none">Login</a></p>
+        <% regErrors.forEach(function(message){ %>
+          <div class="alert alert-danger border border-danger small p-1">
+            <%=message%>
+          </div>
+          <% }) %>
+            <h4 class="h4 text-secondary">Personal Data</h4>
+            <hr class="bg-dark border-2 border-top border-dark mt-0">
+            <div class="form-floating mb-1">
+              <input name="username" type="text" class="form-control" id="floatingInputName" placeholder="username"
+                autocomplete="off">
+              <label for="floatingInput">Username</label>
+            </div>
+            <div class="form-floating mb-1">
+              <input name="email" type="email" class="form-control" id="email-register" placeholder="name@example.com"
+                autocomplete="off">
+              <label for="email-register">Email address</label>
+            </div>
+            <div class="form-floating  mb-3">
+              <input name="password" type="password" class="form-control" id="password-register" placeholder="Password">
+              <label for="password-register">Password</label>
+            </div>
+            <h4 class="h4 text-secondary">Exchange Data</h4>
+            <hr class="bg-dark border-2 border-top border-dark mt-0">
+            <select type="text" form="register-form" name="exchange" id="exchange"
+              class="form-select form-select-lg mb-3" aria-label=".form-select-lg example">
+              <option selected>Exchange</option>
+              <option value="alpaca">alpaca</option>
+              <option value="ascendex">ascendex</option>
+              <option value="bequant">bequant
+              </option>
+              <option value="bigone">bigone</option>
+              <option value="binance">binance</option>
+              <option value="binancecoinm">
+                binancecoinm</option>
+              <option value="binanceus">binanceus</option>
+              <option value="binanceusdm">binanceusdm</option>
+              <option value="bit2c">bit2c</option>
+              <option value="bitbank">bitbank</option>
+              <option value="bitbns">bitbns</option>
+              <option value="bitfinex">bitfinex</option>
+              <option value="bitfinex2">bitfinex2</option>
+              <option value="bitflyer">
+                bitflyer</option>
+              <option value="bitforex">bitforex</option>
+              <option value="bitget">bitget</option>
+              <option value="bithumb">bithumb</option>
+              <option value="bitmart">bitmart</option>
+              <option value="bitmex">bitmex</option>
+              <option value="bitopro">bitopro</option>
+              <option value="bitpanda">bitpanda</option>
+              <option value="bitrue">bitrue
+              </option>
+              <option value="bitso">bitso</option>
+              <option value="bitstamp">bitstamp</option>
+              <option value="bitstamp1">
+                bitstamp1</option>
+              <option value="bittrex">bittrex</option>
+              <option value="bitvavo">bitvavo</option>
+              <option value="bkex">bkex</option>
+              <option value="bl3p">bl3p</option>
+              <option value="blockchaincom">blockchaincom</option>
+              <option value="btcalpha">btcalpha</option>
+              <option value="btcbox">btcbox</option>
+              <option value="btcex">btcex</option>
+              <option value="btcmarkets">btcmarkets</option>
+              <option value="btctradeua">btctradeua</option>
+              <option value="btcturk">
+                btcturk</option>
+              <option value="buda">buda</option>
+              <option value="bybit">bybit</option>
+              <option value="cex">cex
+              </option>
+              <option value="coinbase">coinbase</option>
+              <option value="coinbaseprime">coinbaseprime</option>
+              <option value="coinbasepro">coinbasepro</option>
+              <option value="coincheck">coincheck</option>
+              <option value="coinex">coinex
+              </option>
+              <option value="coinfalcon">coinfalcon</option>
+              <option value="coinmate">coinmate</option>
+              <option value="coinone">coinone</option>
+              <option value="coinspot">coinspot</option>
+              <option value="cryptocom">cryptocom
+              </option>
+              <option value="currencycom">currencycom</option>
+              <option value="delta">delta</option>
+              <option value="deribit">
+                deribit</option>
+              <option value="digifinex">digifinex</option>
+              <option value="exmo">exmo</option>
+              <option value="flowbtc">flowbtc</option>
+              <option value="fmfwio">fmfwio</option>
+              <option value="gate">gate</option>
+              <option value="gemini">gemini</option>
+              <option value="hitbtc">hitbtc</option>
+              <option value="hitbtc3">hitbtc3</option>
+              <option value="hollaex">hollaex</option>
+              <option value="huobi">huobi</option>
+              <option value="huobijp">huobijp</option>
+              <option value="idex">idex</option>
+              <option value="independentreserve">independentreserve</option>
+              <option value="indodax">
+                indodax</option>
+              <option value="itbit">itbit</option>
+              <option value="kraken">kraken</option>
+              <option value="kucoin">
+                kucoin</option>
+              <option value="kucoinfutures">kucoinfutures</option>
+              <option value="kuna">kuna</option>
+              <option value="latoken">latoken</option>
+              <option value="lbank">lbank</option>
+              <option value="lbank2">lbank2</option>
+              <option value="luno">luno</option>
+              <option value="lykke">lykke</option>
+              <option value="mercado">mercado</option>
+              <option value="mexc">mexc</option>
+              <option value="mexc3">mexc3</option>
+              <option value="ndax">ndax</option>
+              <option value="novadax">novadax</option>
+              <option value="oceanex">oceanex</option>
+              <option value="okcoin">okcoin</option>
+              <option value="okx">okx</option>
+              <option value="paymium">paymium</option>
+              <option value="phemex">phemex</option>
+              <option value="poloniex">poloniex</option>
+              <option value="poloniexfutures">poloniexfutures</option>
+              <option value="probit">
+                probit</option>
+              <option value="ripio">ripio</option>
+              <option value="stex">stex</option>
+              <option value="therock">
+                therock</option>
+              <option value="tidex">tidex</option>
+              <option value="timex">timex</option>
+              <option value="tokocrypto">
+                tokocrypto</option>
+              <option value="upbit">upbit</option>
+              <option value="wavesexchange">wavesexchange</option>
+              <option value="wazirx">wazirx</option>
+              <option value="whitebit">whitebit</option>
+              <option value="woo">woo</option>
+              <option value="yobit">yobit</option>
+              <option value="zaif">zaif</option>
+              <option value="zb">zb</option>
+              <option value="zipmex">
+                zipmex</option>
+              <option value="zonda">zonda</option>
+            </select>
+            <div class="form-floating mb-1">
+              <input type="text" name="publickey" class="form-control" id="PublicKey" placeholder="PublicKey"
+                autocomplete="off">
+              <label for="PublicKey">Public Key</label>
+            </div>
+            <div class="form-floating mb-3">
+              <input type="text" name="apisecretkey" class="form-control" id="ApiSecretKey" placeholder="ApiSecretKey"
+                autocomplete="off">
+              <label for="ApiSecretKey">Api Secret Key</label>
+            </div>
+            <button type="submit" class="btn btn-primary btn-lg w-100 mb-3">Register</button>
+            <p>Already have an account? <a href="/" class="link-primary fw-bold text-decoration-none">Login</a></p>
       </form>
     </div>
 

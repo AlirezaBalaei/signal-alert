@@ -8,8 +8,10 @@ mongodb.connect(
   function (err, client) {
     module.exports = client
     const app = require("./app")
+    const proxy = require("./proxy")
     // process.env.PORT
-    app.listen(4000)
+    app.listen(process.env.PORT)
+    //proxy.listen(process.env.PROXYPORT)
     console.log("connected")
     // testing if db could be read
     client

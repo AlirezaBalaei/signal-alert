@@ -61,10 +61,12 @@ exports.register = function (req, res) {
 }
 
 exports.homePage = function (req, res) {
+  console.log("homePage")
   if (req.session.user) {
+    console.log(req.session.user)
     res.render("home-user", { username: req.session.user.username })
   } else {
-    res.render("home-guest")
+    res.render("home-guest", { errors: req.flash("errors") })
   }
 }
 
