@@ -67,6 +67,8 @@ there is some pictures of DB, pages wich user will interact with:
 ![home-guest](https://user-images.githubusercontent.com/99330644/213690021-66ae0f99-0fea-4c95-8ee4-8c6e8aced374.png)
 ## Register
 ![register](https://user-images.githubusercontent.com/99330644/213690028-55c77238-f925-4fbd-8394-1a2429d0f875.png)
+## Home User
+![user-home](https://user-images.githubusercontent.com/99330644/213691094-a271262c-0361-4308-8481-f283a9b08f6f.png)
 ## Invalid Register
 ![invalid-register](https://user-images.githubusercontent.com/99330644/213690022-b86ca5c5-b5cf-4879-9f4b-25cf4c56c354.png)
 
