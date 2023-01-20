@@ -22,6 +22,9 @@ User.prototype.cleanUp = function () {
     exchange: this.data.exchange,
     publickey: this.data.publickey,
     apisecretkey: this.data.apisecretkey,
+    indicators: { rsi: false, macd: false, ema: false, sma: false },
+    notification: { date: null, indicator: null, seen: false },
+    lastseen: { date: null },
   }
 }
 
