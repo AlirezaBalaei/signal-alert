@@ -57,3 +57,16 @@ npm run watch
 ## step #7
 
 Then change directory to `./public/` folder and open it as a live server or just run it on chrome.
+
+
+# Pictures
+there is some pictures of DB, pages wich user will interact with:
+## Data Base
+![db-user](https://user-images.githubusercontent.com/99330644/213690015-c2588ff6-9424-41bd-a4da-f88481e469cf.png)
+## Home Guest
+![home-guest](https://user-images.githubusercontent.com/99330644/213690021-66ae0f99-0fea-4c95-8ee4-8c6e8aced374.png)
+## Register
+![register](https://user-images.githubusercontent.com/99330644/213690028-55c77238-f925-4fbd-8394-1a2429d0f875.png)
+## Invalid Register
+![invalid-register](https://user-images.githubusercontent.com/99330644/213690022-b86ca5c5-b5cf-4879-9f4b-25cf4c56c354.png)
+
