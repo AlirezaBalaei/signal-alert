@@ -5,7 +5,12 @@ exports.login = function (req, res) {
   user
     .login()
     .then(function (result) {
-      req.session.user = { username: user.data.username }
+      req.session.user = {
+        username: user.data.username,
+        indicators: user.data.indicators,
+        notification: user.data.notification,
+        exchange: user.data.exchange,
+      }
       req.session.save(function () {
         res.redirect("/")
       })
