@@ -19,7 +19,7 @@
 <body class="vh-100">
 
   <header class="p-3 mb-3 border-bottom col col-12">
-    <div class="container">
+    <div class="">
       <div class="d-flex flex-wrap align-items-center justify-content-center justify-content-lg-start">
         <a href="/" class="d-flex align-items-center mb-2 mb-lg-0 text-dark text-decoration-none">
           <svg class="bi me-2" width="40" height="32" role="img" aria-label="Bootstrap">
@@ -28,10 +28,7 @@
         </a>
 
         <ul class="nav col-12 col-lg-auto me-lg-auto mb-2 justify-content-center mb-md-0">
-          <li><a href="#" class="nav-link px-2 link-secondary">Overview</a></li>
-          <li><a href="#" class="nav-link px-2 link-dark">Inventory</a></li>
-          <li><a href="#" class="nav-link px-2 link-dark">Customers</a></li>
-          <li><a href="#" class="nav-link px-2 link-dark">Products</a></li>
+          <li><a href="#" class="nav-link px-2 link-secondary">Signal Alert</a></li>
         </ul>
 
 
@@ -60,29 +57,50 @@
       </div>
     </div>
   </header>
-  <main class="row h-100 w-100 px-2">
+  <main class="row h-100 w-100 px-4">
+    <!-- side-bar -->
     <div class="side-bar col col-md-4 col-sm-12">
-      <div class="indicator border border-secondary border-2">
-        <div class="row">
-          <div class="col-12">
-            <div class="list-group" id="list-tab" role="tablist">
-              <h3 class="h3 mx-2">Indicators</h3>
-              <a class="list-group-item list-group-item-action active" id="list-home-list" data-bs-toggle="list"
-                href="#list-home" role="tab" aria-controls="list-home">RSI</a>
-              <a class="list-group-item list-group-item-action" id="list-profile-list" data-bs-toggle="list"
-                href="#list-profile" role="tab" aria-controls="list-profile">MACD</a>
-              <a class="list-group-item list-group-item-action" id="list-messages-list" data-bs-toggle="list"
-                href="#list-messages" role="tab" aria-controls="list-messages">EMA</a>
-              <a class="list-group-item list-group-item-action" id="list-settings-list" data-bs-toggle="list"
-                href="#list-settings" role="tab" aria-controls="list-settings">SMA</a>
-            </div>
+      <!-- indicators -->
+      <h4 class="h4 px-2 mt-1">Receive alerts for:</h4>
+      <div class="indicator shadow rounded-2">
+        <ul class="list-group">
+          <li class="list-group-item">
+            <input class="form-check-input me-1" type="checkbox" value="" aria-label="...">
+            RSI
+          </li>
+          <li class="list-group-item">
+            <input class="form-check-input me-1" type="checkbox" value="" aria-label="...">
+            MACD
+          </li>
+          <li class="list-group-item">
+            <input class="form-check-input me-1" type="checkbox" value="" aria-label="...">
+            EMA
+          </li>
+          <li class="list-group-item">
+            <input class="form-check-input me-1" type="checkbox" value="" aria-label="...">
+            SMA
+          </li>
+        </ul>
+      </div>
+      <!-- alerts -->
+      <div class="alerts mt-3 rounded-2">
+        <h4 class="h4 px-2 mt-1">Alerts:</h4>
+        <div class="card shadow text-dark bg-light mb-3 w-100">
+          <div class="card-header">today 11:00</div>
+          <div class="card-body">
+            <h5 class="card-title">MACD crossed</h5>
+            <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's
+              content.
+            </p>
+            <a href="#" class="btn btn-primary">OK</a>
           </div>
         </div>
-        <div class="alerts bg-danger h-100">alert</div>
       </div>
     </div>
+    <!-- chart -->
     <div class="chart col col-md-8 col-sm-12 px-2">
-      <div class="w-100 h-100" id="tvchart"></div>
+      <h4 class="h4 mt-1">BTC/USDT</h4>
+      <div class="w-100 h-100 border rounded-2 shadow overflow-hidden" id="tvchart"></div>
     </div>
 
   </main>
