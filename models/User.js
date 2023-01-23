@@ -3,6 +3,7 @@ const usersCollection = require("../db").db().collection("users")
 const validator = require("validator")
 
 let User = function (data) {
+  console.log(data)
   this.data = data
   this.errors = []
 }
@@ -24,7 +25,7 @@ User.prototype.cleanUp = function () {
     apisecretkey: this.data.apisecretkey,
     indicators: { rsi: false, macd: false, ema: false, sma: false },
     notification: { date: null, indicator: null, seen: false },
-    lastseen: { date: null },
+    lastlogin: null,
   }
 }
 

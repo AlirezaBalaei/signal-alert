@@ -29,22 +29,6 @@ exports.logout = function (req, res) {
   })
 }
 
-/*exports.history = function (req, res) {
-  if (req.session.user) {
-    res.render("history", { username: req.session.user.username })
-  } else {
-    res.redirect("/")
-  }
-}*/
-
-/*exports.account = function (req, res) {
-  if (req.session.user) {
-    res.render("account", { username: req.session.user.username })
-  } else {
-    res.redirect("/")
-  }
-}*/
-
 exports.register = function (req, res) {
   let user = new User(req.body)
   user
@@ -74,14 +58,6 @@ exports.homePage = function (req, res) {
     res.render("home-guest", { errors: req.flash("errors") })
   }
 }
-
-/*exports.loginPage = function (req, res) {
-  if (req.session.user) {
-    res.send("Page Not Found!")
-  } else {
-    res.render("login", { errors: req.flash("errors") })
-  }
-}*/
 
 exports.registerPage = function (req, res) {
   if (req.session.user) {
