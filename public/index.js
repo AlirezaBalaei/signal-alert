@@ -6,8 +6,6 @@ const getData = async () => {
   return data
 }
 
-// getData();
-
 const renderChart = async () => {
   const chartProperties = {
     timeScale: {
