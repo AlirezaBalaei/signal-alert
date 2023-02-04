@@ -70,3 +70,8 @@ exports.registerPage = function (req, res) {
     res.render("register", { regErrors: req.flash("regErrors") })
   }
 }
+
+exports.updateIndicators = function (req, res) {
+  console.log(req.body)
+  res.redirect("/")
+}
