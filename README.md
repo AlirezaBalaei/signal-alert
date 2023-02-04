@@ -77,7 +77,7 @@ there is some pictures of DB, pages wich user will interact with:
 
 ## Home User
 
-![user-home](https://user-images.githubusercontent.com/99330644/213691094-a271262c-0361-4308-8481-f283a9b08f6f.png)
+![user-home](https://user-images.githubusercontent.com/99330644/216758308-24073724-42b9-4f59-894b-22bafef0ac30.png)
 
 ## Invalid Register
 
