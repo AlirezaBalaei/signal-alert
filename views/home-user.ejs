@@ -3,41 +3,9 @@
     <!-- side-bar -->
     <div class="side-bar col col-md-4 col-sm-12">
       <!-- indicators -->
-      <h4 class="h4 px-2 mt-1">Receive alerts for:</h4>
-      <div class="indicator shadow rounded-2">
-        <ul class="list-group">
-          <li class="list-group-item">
-            <input class="form-check-input me-1" type="checkbox" value="" aria-label="...">
-            RSI
-          </li>
-          <li class="list-group-item">
-            <input class="form-check-input me-1" type="checkbox" value="" aria-label="...">
-            MACD
-          </li>
-          <li class="list-group-item">
-            <input class="form-check-input me-1" type="checkbox" value="" aria-label="...">
-            EMA
-          </li>
-          <li class="list-group-item">
-            <input class="form-check-input me-1" type="checkbox" value="" aria-label="...">
-            SMA
-          </li>
-        </ul>
-      </div>
-      <!-- alerts -->
-      <div class="alerts mt-3 rounded-2">
-        <h4 class="h4 px-2 mt-1">Alerts:</h4>
-        <div class="card shadow text-dark bg-light mb-3 w-100">
-          <div class="card-header">today 11:00</div>
-          <div class="card-body">
-            <h5 class="card-title">MACD crossed</h5>
-            <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's
-              content.
-            </p>
-            <a href="#" class="btn btn-primary">OK</a>
-          </div>
-        </div>
-      </div>
+      <%- include("includes/indicators")%>
+        <!-- alerts -->
+        <%- include("includes/alerts")%>
     </div>
     <!-- chart -->
     <div class="chart col col-md-8 col-sm-12 px-2">

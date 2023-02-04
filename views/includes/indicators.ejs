@@ -1,0 +1,26 @@
+<h4 class="h4 px-2 mt-1">Receive alerts for:</h4>
+<div class="indicator shadow rounded-2">
+  <ul class="list-group">
+    <form action="/update-indicators" method="post">
+      <li class="list-group-item">
+        <input class="form-check-input me-1" type="checkbox" value="RSI" aria-label="...">
+        RSI
+      </li>
+      <li class="list-group-item">
+        <input class="form-check-input me-1" type="checkbox" value="MACD" aria-label="...">
+        MACD
+      </li>
+      <li class="list-group-item">
+        <input class="form-check-input me-1" type="checkbox" value="EMA" aria-label="...">
+        EMA
+      </li>
+      <li class="list-group-item">
+        <input class="form-check-input me-1" type="checkbox" value="SMA" aria-label="...">
+        SMA
+      </li>
+      <li class="list-group-item">
+        <button type="submit" class="btn btn-primary btn-lg w-100">Apply</button>
+      </li>
+    </form>
+  </ul>
+</div>
